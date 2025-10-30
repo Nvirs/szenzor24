@@ -10,7 +10,7 @@ export default function DocsPage() {
   return (
     <article>
       <h1>Welcome to Startup Documentation</h1>
-
+      
       <p className="text-body-color dark:text-body-color-dark text-base">
         This document serves as a simple template to showcase a sample layout
         and format. It is solely created for demonstration purposes and is not
