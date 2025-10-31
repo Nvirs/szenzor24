@@ -67,11 +67,11 @@ const Pricing = () => {
             data-wow-delay=".2s"
           >
             <h2 className="mb-4 text-3xl font-bold text-black dark:text-white sm:text-4xl md:text-[44px] md:leading-tight">
-              Itt választhatsz, milyen színben szeretnéd!
+              Itt választhatsz, melyik szenzort szeretnéd!
             </h2>
             <p className="text-base text-body">
-            Próbáld ki kockázatmentesen és tapasztald meg, hogyan könnyíti meg munkádat a HűtőMonitor! 🛡️❄
-            iztosítunk neked egy terméket próbahasználatra, te pedig győződj meg róla, hogy a HűtőMonitor valóban leegyszerűsíti a napi hőmérséklet-ellenőrzést és megfelel a HACCP előírásoknak
+            Próbáld ki kockázatmentesen és tapasztald meg, hogyan könnyíti meg munkádat a Szenzor24 ! 🛡️❄
+            iztosítunk neked egy terméket próbahasználatra, te pedig győződj meg róla, hogy a Szenzor24 valóban leegyszerűsíti a napi hőmérséklet-ellenőrzést és megfelel a HACCP előírásoknak
             </p>
           </div>
         </div>

@@ -4,6 +4,7 @@ import FsLightbox from "fslightbox-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import SensorsOverview from "@/components/SensorsOverview";
 
 const HeroArea = () => {
   const [toggler, setToggler] = useState(false);
@@ -61,24 +62,35 @@ const HeroArea = () => {
                 data-wow-delay=".3s"
               >
                   <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black dark:text-white text-center mb-2">
-                    A BIZTONSÁGOS ÉLELMISZER TÁROLÁS
+                    Szenzorok a mindennapi biztonságos méréshez
                   </h1>
                   <h2 className="text-lg sm:text-xl font-medium text-black dark:text-white text-center mb-4">
-                    HACCP kompatibilis hőmérséklet figyelés egyszerűen
+                    Teljes körű érzékelés, megbízható adatok és intelligens riasztások
                   </h2>
-                  <ul className="mb-6 text-base sm:text-lg leading-relaxed text-left max-w-md mx-auto list-none">
-                    <li className="flex items-center mb-1"><span className="text-primary font-bold mr-2">✓</span>Leolvadás elleni védelem</li>
-                    <li className="flex items-center mb-1"><span className="text-primary font-bold mr-2">✓</span>Nyitott ajtó visszajelzés</li>
-                    <li className="flex items-center mb-1"><span className="text-primary font-bold mr-2">✓</span>Áramszünet visszajelzés</li>
-                    <li className="flex items-center mb-1"><span className="text-primary font-bold mr-2">✓</span>Műszaki meghibásodás előrejelzés</li>
-                    <li className="flex items-center mb-1"><span className="text-primary font-bold mr-2">✓</span>Illetéktelen hozzáférés elleni védelem</li>
-                  </ul>
-                  <p className="text-body mb-6 text-base sm:text-lg leading-relaxed text-center max-w-xl">
-                    <span className="font-bold text-black dark:text-white">A HűtőMonitor</span> egy innovatív megoldás, amely teljesen automatizálja a hűtők és a fagyasztók hőmérsékletének naplózását, így Önnek többé nem kell manuálisan rögzítenie az adatokat.<br />
-                    A rendszer folyamatosan figyeli a hőmérsékleti értékeket, és automatikusan naplózza azokat a HACCP követelményeinek megfelelően.
+                  <p className="text-body mb-4 text-base sm:text-lg leading-relaxed text-center max-w-xl mx-auto">
+                    Cégünk 5 egységes, egymással integrálódó szenzort kínál: pontos hőmérséklet-mérés, ajtóérzékelés, áramfelügyelet, állapotfigyelés és hálózati integráció. Adatainkat biztonságosan gyűjtjük, feldolgozzuk és átlátható módon jelenítjük meg, hogy jobb, gyorsabb üzleti döntéseket hozhasson.
                   </p>
-                <p className="flex flex-wrap gap-4">
-                </p>
+                  {/* CTA */}
+                  <div className="flex items-center justify-center gap-4">
+                    <a
+                      href="#features"
+                      className="rounded-md bg-primary px-6 py-3 text-white shadow-md transition-opacity duration-200 hover:opacity-90"
+                    >
+                      Fedezd fel szenzorainkat
+                    </a>
+                    <button
+                      onClick={() => {
+                        const el = document.getElementById("features");
+                        if (el) el.scrollIntoView({ behavior: "smooth" });
+                      }}
+                      className="rounded-md border border-transparent bg-white/5 px-4 py-2 text-sm text-body transition-colors duration-200 hover:bg-white/10"
+                    >
+                      Tudj meg többet
+                    </button>
+                  </div>
+
+                  {/* Sensors overview (5 sensors) */}
+                  <SensorsOverview />
                
               </div>
             </div>
@@ -88,7 +100,7 @@ const HeroArea = () => {
                 className="wow fadeInUp relative z-10 mx-auto w-full max-w-[790px]"
                 data-wow-delay=".3s"
               >
- <div
+                <div
                   ref={modelViewerRef}
                   dangerouslySetInnerHTML={{
                     __html: `<model-viewer
@@ -97,7 +109,7 @@ const HeroArea = () => {
                       auto-rotate
                       camera-controls
                       crossorigin="anonymous"
-                      style="width: 100%; height: 400px;">
+                      style="width: 100%; height: 400px; border-radius:12px;">
                     </model-viewer>`,
                   }}
                 />
