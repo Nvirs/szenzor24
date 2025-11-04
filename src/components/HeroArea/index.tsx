@@ -72,7 +72,7 @@ const HeroArea = () => {
 
   return (
     <>
-      <section id="home" className="pt-28 pb-10">
+      <section id="home" className="pt-36 sm:pt-28 pb-10">
         <div className="container lg:max-w-[1200px] lg:px-10">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-6/12">
